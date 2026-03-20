@@ -1,5 +1,8 @@
 import java.util.ArrayList;
 
+/**
+ * Clase Gestor Matriculas
+ */
 public class GestorMatriculas extends MostrarMatriculas {
 
     public GestorMatriculas() {
@@ -18,6 +21,10 @@ public class GestorMatriculas extends MostrarMatriculas {
     }
 
     private static double notaCero(double nota) {
+        /**
+         * Introducimos una nota y si es menor que 0, nos devuelve un cero,y si no fuese este caso, nos devolvería nuestra notal tal y como se la dimos
+         *
+         */
         if (nota < 0) {
             nota = 0;
         }

@@ -1,5 +1,9 @@
 import java.util.ArrayList;
 
+/**
+ *
+ * Clase Curso que implementa la interfaz creada de nombre "MostrarTodo"
+ */
 public class Curso implements MostrarTodo {
 
     public String nombre;

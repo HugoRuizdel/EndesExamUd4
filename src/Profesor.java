@@ -1,3 +1,7 @@
+/**
+ * Clase Profesor
+ *
+ */
 public class Profesor {
 
     public String nombre;

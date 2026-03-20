@@ -1,3 +1,6 @@
+/**
+ * Clase Matricula
+ */
 public class Matricula{
 
     public Alumno alumno;

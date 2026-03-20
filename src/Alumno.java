@@ -1,5 +1,9 @@
 import java.util.ArrayList;
 
+/**
+ * Clase Alumno
+ * @author Hugo Ruiz del Castillo
+ */
 public class Alumno {
 
     public String nombre;
@@ -39,6 +43,9 @@ public class Alumno {
     }
 
     public double calcularMedia() {
+        /**
+         * Metodo para calcular la media,si el tamaño de las notas fuese 0, nos devuelve cero,si no fuese así nos devolveríalasuma delas notas entre el numero de notas (la media)
+         */
         double suma = 0;
 
         suma = getSumaMatricula(suma);

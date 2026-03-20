@@ -1,3 +1,6 @@
+/**
+ * Clase asignatura
+ */
 public class Asignatura {
 
     public String nombre;
