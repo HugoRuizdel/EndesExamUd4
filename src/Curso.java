@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 /**
  *
- * Clase Curso que implementa la interfaz creada de nombre "MostrarTodo"
+ * Clase Curso que implementa la interfaz
  */
 public class Curso implements MostrarTodo {
 
