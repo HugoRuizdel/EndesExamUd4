@@ -30,31 +30,31 @@ public class Curso {
         profesores = new ArrayList<>();
     }
 
-    public void agregarAlumno(Alumno a) {
-        alumnos.add(a);
+    public void agregarAlumno(Alumno alumno) {
+        alumnos.add(alumno);
     }
 
-    public void agregarAsignatura(Asignatura a) {
-        asignaturas.add(a);
+    public void agregarAsignatura(Asignatura asignatura) {
+        asignaturas.add(asignatura);
     }
 
-    public void agregarProfesor(Profesor p) {
-        profesores.add(p);
+    public void agregarProfesor(Profesor profesor) {
+        profesores.add(profesor);
     }
 
     public void mostrarTodo() {
         System.out.println("CURSO: " + nombre);
 
-        for (Alumno a : alumnos) {
-            System.out.println("Alumno: " + a.nombre);
+        for (Alumno alumno : alumnos) {
+            System.out.println("Alumno: " + alumno.nombre);
         }
 
-        for (Asignatura as : asignaturas) {
-            System.out.println("Asignatura: " + as.nombre);
+        for (Asignatura asignatura : asignaturas) {
+            System.out.println("Asignatura: " + asignatura.nombre);
         }
 
-        for (Profesor p : profesores) {
-            System.out.println("Profesor: " + p.nombre);
+        for (Profesor profesor : profesores) {
+            System.out.println("Profesor: " + profesor.nombre);
         }
     }
 }

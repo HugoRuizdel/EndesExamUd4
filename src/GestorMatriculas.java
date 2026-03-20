@@ -1,26 +1,20 @@
 import java.util.ArrayList;
 
-public class GestorMatriculas {
-
-    public ArrayList<Matricula> matriculas;
+public class GestorMatriculas extends MostrarMatriculas {
 
     public GestorMatriculas() {
         matriculas = new ArrayList<>();
     }
 
-    public ArrayList<Matricula> getMatriculas() {
-        return matriculas;
-    }
-
-    public void crearMatricula(Alumno a, Asignatura as, Profesor p, double nota) {
+    public void crearMatricula(Alumno alumno, Asignatura asignatura, Profesor profesor, double nota) {
 
         nota = notaCero(nota);
 
-        Matricula m = new Matricula(a, as, p, nota);
+        Matricula matricula = new Matricula(alumno, asignatura, profesor, nota);
 
-        matriculas.add(m);
+        matriculas.add(matricula);
 
-        a.matricular(m);
+        alumno.matricular(matricula);
     }
 
     private static double notaCero(double nota) {
@@ -30,44 +24,33 @@ public class GestorMatriculas {
         return nota;
     }
 
-    public void mostrarTodas() {
-        for (Matricula m : matriculas) {
-            System.out.println(
-                m.alumno.nombre + " - " +
-                m.asignatura.nombre + " - " +
-                m.profesor.nombre + " - " +
-                m.nota
-            );
-        }
-    }
-
     public void mostrarAprobados() {
-        for (Matricula m : matriculas) {
-            if (m.nota >= 5) {
-                System.out.println("APROBADO: " + m.alumno.nombre);
+        for (Matricula matricula : matriculas) {
+            if (matricula.nota >= 5) {
+                System.out.println("APROBADO: " + matricula.alumno.nombre);
             }
         }
     }
 
     public void subirNotaTodos(double puntos) {
-        for (Matricula m : matriculas) {
-            m.nota = m.nota + puntos;
+        for (Matricula matricula : matriculas) {
+            matricula.nota = matricula.nota + puntos;
 
-            notaDiez(m);
+            notaDiez(matricula);
         }
     }
 
-    private static void notaDiez(Matricula m) {
-        if (m.nota > 10) {
-            m.nota = 10;
+    private static void notaDiez(Matricula matricula) {
+        if (matricula.nota > 10) {
+            matricula.nota = 10;
         }
     }
 
     public double mediaGlobal() {
         double suma = 0;
 
-        for (Matricula m : matriculas) {
-            suma += m.nota;
+        for (Matricula matricula : matriculas) {
+            suma += matricula.nota;
         }
 
         if (matriculas.size() == 0) return 0;
