@@ -4,27 +4,27 @@ public class Main {
 
         Curso curso = new Curso("1 DAM");
 
-        Alumno a1 = new Alumno("Carlos", 20);
-        Alumno a2 = new Alumno("Ana", 22);
+        Alumno alumno1 = new Alumno("Carlos", 20);
+        Alumno alumno2 = new Alumno("Ana", 22);
 
-        Profesor p1 = new Profesor("Juan", "Matematicas");
-        Profesor p2 = new Profesor("Laura", "Programacion");
+        Profesor profesor1 = new Profesor("Juan", "Matematicas");
+        Profesor profesor2 = new Profesor("Laura", "Programacion");
 
-        Asignatura as1 = new Asignatura("Matematicas");
-        Asignatura as2 = new Asignatura("Programacion");
+        Asignatura asignatura1 = new Asignatura("Matematicas");
+        Asignatura asignatura2 = new Asignatura("Programacion");
 
-        curso.agregarAlumno(a1);
-        curso.agregarAlumno(a2);
-        curso.agregarProfesor(p1);
-        curso.agregarProfesor(p2);
-        curso.agregarAsignatura(as1);
-        curso.agregarAsignatura(as2);
+        curso.agregarAlumno(alumno1);
+        curso.agregarAlumno(alumno2);
+        curso.agregarProfesor(profesor1);
+        curso.agregarProfesor(profesor2);
+        curso.agregarAsignatura(asignatura1);
+        curso.agregarAsignatura(asignatura2);
 
         GestorMatriculas gestor = new GestorMatriculas();
 
-        gestor.crearMatricula(a1, as1, p1, 7);
-        gestor.crearMatricula(a1, as2, p2, 4);
-        gestor.crearMatricula(a2, as1, p1, 9);
+        gestor.crearMatricula(alumno1, asignatura1, profesor1, 7);
+        gestor.crearMatricula(alumno1, asignatura2, profesor2, 4);
+        gestor.crearMatricula(alumno2, asignatura1, profesor1, 9);
 
         curso.mostrarTodo();
 

@@ -8,17 +8,26 @@ public class GestorMatriculas {
         matriculas = new ArrayList<>();
     }
 
+    public ArrayList<Matricula> getMatriculas() {
+        return matriculas;
+    }
+
     public void crearMatricula(Alumno a, Asignatura as, Profesor p, double nota) {
 
-        if (nota < 0) {
-            nota = 0;
-        }
+        nota = notaCero(nota);
 
         Matricula m = new Matricula(a, as, p, nota);
 
         matriculas.add(m);
 
         a.matricular(m);
+    }
+
+    private static double notaCero(double nota) {
+        if (nota < 0) {
+            nota = 0;
+        }
+        return nota;
     }
 
     public void mostrarTodas() {
@@ -44,9 +53,13 @@ public class GestorMatriculas {
         for (Matricula m : matriculas) {
             m.nota = m.nota + puntos;
 
-            if (m.nota > 10) {
-                m.nota = 10;
-            }
+            notaDiez(m);
+        }
+    }
+
+    private static void notaDiez(Matricula m) {
+        if (m.nota > 10) {
+            m.nota = 10;
         }
     }
 

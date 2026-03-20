@@ -7,6 +7,22 @@ public class Curso {
     public ArrayList<Asignatura> asignaturas;
     public ArrayList<Profesor> profesores;
 
+    public String getNombre() {
+        return nombre;
+    }
+
+    public ArrayList<Alumno> getAlumnos() {
+        return alumnos;
+    }
+
+    public ArrayList<Asignatura> getAsignaturas() {
+        return asignaturas;
+    }
+
+    public ArrayList<Profesor> getProfesores() {
+        return profesores;
+    }
+
     public Curso(String nombre) {
         this.nombre = nombre;
         alumnos = new ArrayList<>();
