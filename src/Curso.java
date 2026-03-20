@@ -46,16 +46,28 @@ public class Curso implements MostrarTodo {
     public void mostrarTodo() {
         System.out.println("CURSO: " + nombre);
 
-        for (Alumno alumno : alumnos) {
-            System.out.println("Alumno: " + alumno.nombre);
-        }
+        mostrarAlumno();
 
+        mostrarAsignatura();
+
+        mostrarProfesor();
+    }
+
+    private void mostrarProfesor() {
+        for (Profesor profesor : profesores) {
+            System.out.println("Profesor: " + profesor.nombre);
+        }
+    }
+
+    private void mostrarAsignatura() {
         for (Asignatura asignatura : asignaturas) {
             System.out.println("Asignatura: " + asignatura.nombre);
         }
+    }
 
-        for (Profesor profesor : profesores) {
-            System.out.println("Profesor: " + profesor.nombre);
+    private void mostrarAlumno() {
+        for (Alumno alumno : alumnos) {
+            System.out.println("Alumno: " + alumno.nombre);
         }
     }
 }
