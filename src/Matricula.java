@@ -1,4 +1,4 @@
-public class Matricula {
+public class Matricula{
 
     public Alumno alumno;
     public Asignatura asignatura;

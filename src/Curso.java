@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Curso {
+public class Curso implements MostrarTodo {
 
     public String nombre;
     public ArrayList<Alumno> alumnos;
@@ -42,6 +42,7 @@ public class Curso {
         profesores.add(profesor);
     }
 
+    @java.lang.Override
     public void mostrarTodo() {
         System.out.println("CURSO: " + nombre);
 
